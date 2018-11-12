@@ -14,10 +14,14 @@ angular.module("pokemonApp")
             {codigo: 2, descricao: "Fogo"},
             {codigo: 3, descricao: "Água"}
         ];
+        var _listaTreinadores = [
+            {nome: "Tiago"}
+        ];
 
         return {
             listaPokemons: _listaPokemons,
             listaTipos: _listaTipos,
-            pokemon: _pokemon
+            pokemon: _pokemon,
+            listaTreinadores: _listaTreinadores
         };
     }

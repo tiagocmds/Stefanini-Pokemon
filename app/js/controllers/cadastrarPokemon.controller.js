@@ -27,7 +27,7 @@
 
                 $scope.pokemon = {};
                 $scope.service.pokemon = {};
-                $location.path("/listar");
+                $location.path("/listarPokemon");
             };
 
         }
