@@ -18,5 +18,14 @@
             $scope.excluir = function(index) {
                 $scope.service.listaPokemons.splice(index, 1);
             };
+            $scope.capturar = function(pokemon){
+                pokemonService.pokemon = pokemon;
+                pokemonService.captura = false;
+                $location.path("/listarTreinador");
+                
+            };
+            $scope.voltar = function(){
+                $location.path("/main");
+            };
             
         }

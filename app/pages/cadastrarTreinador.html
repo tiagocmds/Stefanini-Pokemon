@@ -1,0 +1,10 @@
+<div class="row">
+    <form name="formCadastrar" ng-submit="inserir(treinador)">
+        <div class="form-group">
+            <label>Nome:</label>
+            <input type="text" class="form-control" ng-required="true" ng-model="treinador.nome">
+        </div>
+
+        <button class="btn btn-primary" ng-disabled="formCadastrar.$invalid" type="submit">Inserir</button>
+    </form>
+</div>

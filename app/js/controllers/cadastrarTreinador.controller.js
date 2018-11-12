@@ -5,7 +5,7 @@ angular.module("pokemonApp").controller("cadastrarTreinador", function($scope, $
     
     $scope.inserir = function(treinador) {
         if (treinador.id) {
-            var treinadorAlterado = $scope.service.listaPokemons.filter(function(treinadorItem) {
+            var treinadorAlterado = $scope.service.listaTreinadores.filter(function(treinadorItem) {
                 if (treinadorItem.id === treinador.id) {
                     return treinadorItem;
                 }
@@ -16,12 +16,14 @@ angular.module("pokemonApp").controller("cadastrarTreinador", function($scope, $
             
         
         } else {
-            treinador.id = ++$scope.contadorId;
-            $scope.service.listaTreinadores.push(angular.copy(treinador));
+        treinador.id = $scope.service.listaTreinadores.length + 1;
+        treinador.pokemons = [];
+        $scope.service.listaTreinadores.push(angular.copy(treinador));
         }
-
+        
         $scope.treinador = {};
         $scope.service.treinador = {};
         $location.path("/listarTreinador");
+        
     };
 });

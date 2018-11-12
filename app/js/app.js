@@ -24,10 +24,12 @@ function config($routeProvider) {
         controller: "mainController"
     }).
     when("/listarTreinador", {
-        templateUrl: "/app/pages/listarTreinador.html"
+        templateUrl: "/app/pages/listarTreinador.html",
+        controller: "listarTreinador"
     }).
     when("/cadastrarTreinador", {
-        templateUrl: "/app/pages/cadastrarTreinador.html"
+        templateUrl: "/app/pages/cadastrarTreinador.html",
+        controller: "cadastrarTreinador"
     })
     .otherwise({
         redirectTo: "/login"

@@ -15,13 +15,17 @@ angular.module("pokemonApp")
             {codigo: 3, descricao: "Água"}
         ];
         var _listaTreinadores = [
-            {nome: "Tiago"}
+            {nome: "Tiago", id: 1, pokemons: []}
         ];
+        var _captura = false;
+
 
         return {
             listaPokemons: _listaPokemons,
             listaTipos: _listaTipos,
             pokemon: _pokemon,
-            listaTreinadores: _listaTreinadores
+            listaTreinadores: _listaTreinadores,
+            captura: _captura
+
         };
     }

@@ -14,6 +14,7 @@
                     <td class="tRight">
                         <button class="btn btn-danger" ng-click="excluir($index)">X</button>
                         <button class="btn btn-success" ng-click="editar(pokemon)">✏️</button>
+                        <button class="btn btn-success" ng-click="capturar(pokemon)">Capturar</button>
                     </td>
                 </tr>
                 <tr ng-show="!service.listaPokemons.length && !acaoCadastrar" class="tCenter">
@@ -24,4 +25,5 @@
             </tbody>
         </table>
         <button class="btn btn-outline-primary" ng-click="irTelaCadastrar()">[+] Novo Pokemon</button>
+        <button class="btn btn-outline-primary" ng-click="voltar()">[-] Voltar</button>
     </div>

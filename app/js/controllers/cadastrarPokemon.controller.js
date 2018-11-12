@@ -4,6 +4,7 @@
         cadastrarPokemonController.$inject = ['$scope', "$rootScope", "$location", "pokemonService"];
 
         function cadastrarPokemonController($scope, $rootScope, $location, pokemonService) {
+            
             $scope.contadorId = 0;
             $scope.service = pokemonService;
             $scope.pokemon = $scope.service.pokemon;
@@ -21,7 +22,7 @@
                     
                 
                 } else {
-                    pokemon.id = ++$scope.contadorId;
+                    pokemon.id = $scope.service.listaPokemons.length;
                     $scope.service.listaPokemons.push(angular.copy(pokemon));
                 }
 
